@@ -8,11 +8,11 @@ namespace TipCalculator.Models
         [Range(0.0, 10000000.0, ErrorMessage = "Cost of meal must be greater than zero.")]
         public double? MealCost { get; set; }
 
-        public double CalculateTip(double percent)
+        public decimal CalculateTip(decimal percent)
         {
             if (MealCost.HasValue)
             {
-                var tip = MealCost.Value / percent;
+                var tip = (decimal)MealCost.Value * percent ;
                 return tip;
             }
             else

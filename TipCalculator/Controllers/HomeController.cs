@@ -25,9 +25,9 @@ namespace TipCalculator.Controllers
         {
             if (ModelState.IsValid)
             {
-                ViewBag.Fifteen = calc.CalculateTip(0.15);
-                ViewBag.Twenty = calc.CalculateTip(0.20);
-                ViewBag.TwentyFive = calc.CalculateTip(0.25);
+                ViewBag.Fifteen = calc.CalculateTip((decimal)0.15);
+                ViewBag.Twenty = calc.CalculateTip((decimal)0.20);
+                ViewBag.TwentyFive = calc.CalculateTip((decimal)0.25);
             }
             else
             {
